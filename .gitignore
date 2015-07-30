@@ -7,6 +7,4 @@ jeet/
 normalize/
 node_modules/
 bower_components/
-static/styles/libs/*
-dev/css/*
-dev/*
+static/
