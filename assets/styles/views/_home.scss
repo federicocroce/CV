@@ -16,6 +16,8 @@ $BlueGrey900: #263238;
 
 .background {
   background-color: $BlueGrey800;
+  background: url("../img/53483-hardDrive.jpg") no-repeat;
+  -webkit-filter: blur(5px);
 }
 
 /*.background{background:url("../img/background.jpg") no-repeat; background-size: contain; -webkit-filter: blur(2px);}*/
