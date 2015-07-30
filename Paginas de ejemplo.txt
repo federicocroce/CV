@@ -1,0 +1,6 @@
+Animaciones de hover   http://ianlunn.github.io/Hover/
+Blur img   http://codepen.io/frxnz/pen/dvxoz
+
+Fill-mode animation  http://www.sitepoint.com/understanding-css-animation-fill-mode-property/
+
+
