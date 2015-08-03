@@ -3,35 +3,61 @@ $BlueGrey400: #607D8B;
 $BlueGrey800: #37474F;
 $BlueGrey900: #263238;
 
+////////////// GENERAL
+
 *{
   margin: 0 auto;
   padding: 0;
   font-family: 'Roboto', sans-serif;
 }
 
-.alpha-true{@include opacity(1);}
-.alpha-false{@include opacity(0);}
+.center-content{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+}
+
+.opacity-false{@include opacity(1);}
+.opacity-true{@include opacity(0);}
 
 .full-screen {
   height: 100%;
   width: 100%;
 }
 
+///////////////////////
+
+
+.backgorund-container{@extend .full-screen; background-color: #37474F;}
+
 .background {
   background-color: $BlueGrey800;
+  @extend .full-screen;
   /*background: url("../img/53483-hardDrive.jpg") no-repeat;*/
   /*-webkit-filter: blur(5px);*/
+}
+
+.background-img {
+  background-color: $BlueGrey800;
+  @extend .full-screen;
+  background: url("../img/53483-hardDrive.jpg") no-repeat;
+  -webkit-filter: blur(5px);
+  height: 70%;
+  position: fixed;
+}
+
+.opacity-active-background{
+  animation: opacity-active-background 1s forwards;
 }
 
 /*.background{background:url("../img/background.jpg") no-repeat; background-size: contain; -webkit-filter: blur(2px);}*/
 /*.wraper-begin {right: 50%; top: 50%; position: absolute; transform: translate(50%, -50%)}*/
 /*.avatar-ring{height: 110px; width: 110px; border-radius: 50%; background-color: rgba(24, 24, 24, 1); border: 2px solid rgba(255, 255, 255, 0.5);}*/
 
-.avatar {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  top: 50%;
+.avatar{
+  @extend .center-content;
+  top: 70%;
 }
   
 /*background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transform: scale(0.9); border-radius: 50%; background-size: contain;}*/
@@ -54,8 +80,8 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
 
 .avatar-ring {
   border-radius: 50%;
-  background-color: $BlueGrey900;
-  border: 5px solid $BlueGrey900;
+  background-color: $BlueGrey800;
+  border: 5px solid $BlueGrey800;
 }
 
 .avatar-img {
@@ -65,6 +91,111 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
   transform: scale(1);
   border-radius: 50%;
   background-size: contain;
+}
+
+.avatar-active {
+  animation: avatar-active 1s  forwards;
+}
+
+.avatar-ring-active {
+  animation: avatar-ring-active 2s  forwards;
+}
+
+.nav-bar-active {
+  animation: nav-bar-active 2s 1s forwards;
+}
+
+/*// .nav-bar {
+//   height: 15%;
+//   width: 100%;
+//   background-color: $BlueGrey900;
+// }*/
+
+.nav-bar-blur-active {
+  animation: line-nav-bar-active 1s 1s forwards;
+}
+
+.content-border-title{border: 1px solid $BlueGrey400; @extend .center-content; transform: rotateZ(180deg) translateX(50%); top: 25%; 
+  legend{padding: 13px; margin: 12px; color: #607D8B; transform: rotateZ(180deg);}
+}
+
+
+.name{font-size: 2em; padding: 20px; color: $BlueGrey400;}
+
+.line-nav-bar {
+  width: 0;
+  height: 1px;
+  border-bottom: 1px solid $BlueGrey900;
+  position: absolute;
+  top: 15%;
+  /*// left: 20%;*/
+}
+
+.line-background{
+  @extend .line-nav-bar;
+  width: 100%; top:69%; border-bottom: 30px solid $BlueGrey800;}
+
+.nav-bar{
+    background-color:$BlueGrey900;
+    padding-left: 150px;
+    height: 15%;
+    width: 100%;
+    text-align: center;
+    @include opacity(0);
+    position: absolute;
+    top: 0;
+  .nav-bar-text{    
+    display: inline-block;
+    padding-left: 20px;
+    text-decoration: initial;
+  }
+  .list-unstyled{
+    margin: auto 0;
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 0;
+    height: 100%;
+    height: 50%;
+    position: relative;
+    top: 50%;   
+  }
+  ul>li{
+    padding: 0;
+    display: inline-block;
+    margin-left: -4px;
+    margin-bottom: 0;
+    height: 100%;
+    border-bottom: 5px solid rgba(96, 125, 139, 0); text-decoration: none;    
+    &:hover {      
+      animation: nav-bar-a-active 1s  forwards;
+    }
+    &:active{
+      border-bottom: 5px solid rgba(96, 125, 139, 1);
+    }
+    a {
+    padding: 0 20px;
+    display: inline-block;
+    text-decoration: none;
+    color: $BlueGrey400;  
+    height: 100%;  
+    }    
+  }
+}
+  /*.nav-bar-a{
+    border-bottom: 5px solid rgba(96, 125, 139, 1); text-decoration: none;
+  }*/
+
+
+
+
+///////////////////////// ANIMATIONS
+
+@keyframes opacity-active-background {
+  100% {
+   @include opacity(0);
+   /*background: none;*/
+   -webkit-filter: blur(0);
+  }
 }
 
 @keyframes avatar-active {
@@ -104,98 +235,11 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
   /*100% {transform: scaleX(1); background-color: #263238; height: 15%; margin-bottom: 0;}*/
 }
 
-
-@keyframes nav-bar-blur-active {
-  100% {
-      width: 100%;
-  }
+@keyframes line-nav-bar-active {
+  100% {width: 100%;}
   /*100% {transform: scaleX(1); background-color: #263238; height: 15%; margin-bottom: 0;}*/
 }
 
-
-.avatar-active {
-  animation: avatar-active 1s  forwards;
-}
-
-.avatar-ring-active {
-  animation: avatar-ring-active 2s  forwards;
-}
-
-.nav-bar-active {
-  animation: nav-bar-active 2s 1s forwards;
-}
-
-// .nav-bar {
-//   /*margin-bottom: 15%;*/
-//   height: 15%;
-//   width: 100%;
-//   background-color: $BlueGrey900;
-     
-// }
-
-.nav-bar-blur-active {
-  animation: nav-bar-blur-active 1s 1s forwards;
-}
-
-.nav-bar-blur {
-  width: 0;
-  height: 1px;
-  border-bottom: 1px solid $BlueGrey900;
-  position: absolute;
-  top: 15%;
-  /*// left: 20%;*/
-}
-
-.nav-bar{
-    height: 15%;
-    width: 100%;
-    background-color:$BlueGrey900;
-    padding-left: 150px;
-    height: 15%;
-    width: 100%;
-    text-align: center;
-    @include opacity(0);
-    position: absolute;
-    top: 0;
-  .nav-bar-text{
-    
-    display: inline-block;
-    padding-left: 20px;
-    text-decoration: initial;
-  }
-  .list-unstyled{
-    margin: auto 0;
-    padding-left: 0;
-    list-style: none;
-    margin-bottom: 0;
-    height: 100%;
-    height: 50%;
-    position: relative;
-    top: 50%;   
-  }
-  ul>li{
-      padding: 0;
-      display: inline-block;
-      margin-left: -4px;
-      margin-bottom: 0;
-      height: 100%;
-      &:hover {
-        border-bottom: 5px solid $BlueGrey400;
-        text-decoration: none;
-      }
-    }    
-  ul>li.active a {
-    border-bottom: 5px solid $BlueGrey400;
-    text-decoration: none;
-  }
-  ul>li a {
-    padding: 0 20px;
-    display: inline-block;
-    // line-height: 70px;
-    // height: 70px;
-    text-decoration: none;
-    color: $BlueGrey400;  
-    height: 100%;  
-  }
-
+@keyframes nav-bar-a-active {
+  100% {border-bottom: 5px solid $BlueGrey400;}
 }

@@ -970,31 +970,47 @@ html, button {
   padding: 0;
   font-family: 'Roboto', sans-serif; }
 
-.alpha-true {
+.center-content, .avatar, .content-border-title {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%; }
+
+.opacity-false {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1; }
 
-.alpha-false {
+.opacity-true {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0; }
 
-.full-screen {
+.full-screen, .backgorund-container, .background, .background-img {
   height: 100%;
   width: 100%; }
+
+.backgorund-container {
+  background-color: #37474F; }
 
 .background {
   background-color: #37474F;
   /*background: url("../img/53483-hardDrive.jpg") no-repeat;*/
   /*-webkit-filter: blur(5px);*/ }
 
+.background-img {
+  background-color: #37474F;
+  background: url("../img/53483-hardDrive.jpg") no-repeat;
+  -webkit-filter: blur(5px);
+  height: 70%;
+  position: fixed; }
+
+.opacity-active-background {
+  animation: opacity-active-background 1s forwards; }
+
 /*.background{background:url("../img/background.jpg") no-repeat; background-size: contain; -webkit-filter: blur(2px);}*/
 /*.wraper-begin {right: 50%; top: 50%; position: absolute; transform: translate(50%, -50%)}*/
 /*.avatar-ring{height: 110px; width: 110px; border-radius: 50%; background-color: rgba(24, 24, 24, 1); border: 2px solid rgba(255, 255, 255, 0.5);}*/
 .avatar {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  top: 50%; }
+  top: 70%; }
 
 /*background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transform: scale(0.9); border-radius: 50%; background-size: contain;}*/
 /*.arrow-down-container{margin-top: 100px; position: relative;}
@@ -1012,8 +1028,8 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
     transform: translate(-50%,-50%);}*/
 .avatar-ring {
   border-radius: 50%;
-  background-color: #263238;
-  border: 5px solid #263238; }
+  background-color: #37474F;
+  border: 5px solid #37474F; }
 
 .avatar-img {
   background: url("../img/avatar.png") no-repeat;
@@ -1023,35 +1039,6 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
   border-radius: 50%;
   background-size: contain; }
 
-@keyframes avatar-active {
-  /*0%   {top: 0;}*/
-  100% {
-    top: 5%;
-    left: 2%;
-    transform: translate(0, 0); } }
-@keyframes avatar-ring-active {
-  0% {
-    transform: scale(1); }
-  50% {
-    border: rgba(255, 255, 255, 0);
-    transform: scale(0.6); }
-  100% {
-    transform: scale(1);
-    border: 5px solid #263238;
-    box-shadow: 0 1px 6px #263238;
-    /*box-shadow: 0px 12px 28px -8px $BlueGrey400;*/ } }
-@keyframes nav-bar-active {
-  100% {
-    background-color: #263238;
-    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-    opacity: 1;
-    box-shadow: 0 1px 6px #263238;
-    /*box-shadow: 0 3px 10px $BlueGrey400;*/ }
-  /*100% {transform: scaleX(1); background-color: #263238; height: 15%; margin-bottom: 0;}*/ }
-@keyframes nav-bar-blur-active {
-  100% {
-    width: 100%; }
-  /*100% {transform: scaleX(1); background-color: #263238; height: 15%; margin-bottom: 0;}*/ }
 .avatar-active {
   animation: avatar-active 1s  forwards; }
 
@@ -1061,10 +1048,30 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
 .nav-bar-active {
   animation: nav-bar-active 2s 1s forwards; }
 
+/*// .nav-bar {
+//   height: 15%;
+//   width: 100%;
+//   background-color: $BlueGrey900;
+// }*/
 .nav-bar-blur-active {
-  animation: nav-bar-blur-active 1s 1s forwards; }
+  animation: line-nav-bar-active 1s 1s forwards; }
 
-.nav-bar-blur {
+.content-border-title {
+  border: 1px solid #607D8B;
+  transform: rotateZ(180deg) translateX(50%);
+  top: 25%; }
+  .content-border-title legend {
+    padding: 13px;
+    margin: 12px;
+    color: #607D8B;
+    transform: rotateZ(180deg); }
+
+.name {
+  font-size: 2em;
+  padding: 20px;
+  color: #607D8B; }
+
+.line-nav-bar, .line-background {
   width: 0;
   height: 1px;
   border-bottom: 1px solid #263238;
@@ -1072,9 +1079,12 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
   top: 15%;
   /*// left: 20%;*/ }
 
-.nav-bar {
-  height: 15%;
+.line-background {
   width: 100%;
+  top: 69%;
+  border-bottom: 30px solid #37474F; }
+
+.nav-bar {
   background-color: #263238;
   padding-left: 150px;
   height: 15%;
@@ -1102,20 +1112,61 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
     display: inline-block;
     margin-left: -4px;
     margin-bottom: 0;
-    height: 100%; }
-    .nav-bar ul > li:hover {
-      border-bottom: 5px solid #607D8B;
-      text-decoration: none; }
-  .nav-bar ul > li.active a {
-    border-bottom: 5px solid #607D8B;
+    height: 100%;
+    border-bottom: 5px solid rgba(96, 125, 139, 0);
     text-decoration: none; }
-  .nav-bar ul > li a {
-    padding: 0 20px;
-    display: inline-block;
-    text-decoration: none;
-    color: #607D8B;
-    height: 100%; }
+    .nav-bar ul > li:hover {
+      animation: nav-bar-a-active 1s  forwards; }
+    .nav-bar ul > li:active {
+      border-bottom: 5px solid #607d8b; }
+    .nav-bar ul > li a {
+      padding: 0 20px;
+      display: inline-block;
+      text-decoration: none;
+      color: #607D8B;
+      height: 100%; }
 
+/*.nav-bar-a{
+  border-bottom: 5px solid rgba(96, 125, 139, 1); text-decoration: none;
+}*/
+@keyframes opacity-active-background {
+  100% {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    /*background: none;*/
+    -webkit-filter: blur(0); } }
+@keyframes avatar-active {
+  /*0%   {top: 0;}*/
+  100% {
+    top: 5%;
+    left: 2%;
+    transform: translate(0, 0); } }
+@keyframes avatar-ring-active {
+  0% {
+    transform: scale(1); }
+  50% {
+    border: rgba(255, 255, 255, 0);
+    transform: scale(0.6); }
+  100% {
+    transform: scale(1);
+    border: 5px solid #263238;
+    box-shadow: 0 1px 6px #263238;
+    /*box-shadow: 0px 12px 28px -8px $BlueGrey400;*/ } }
+@keyframes nav-bar-active {
+  100% {
+    background-color: #263238;
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    opacity: 1;
+    box-shadow: 0 1px 6px #263238;
+    /*box-shadow: 0 3px 10px $BlueGrey400;*/ }
+  /*100% {transform: scaleX(1); background-color: #263238; height: 15%; margin-bottom: 0;}*/ }
+@keyframes line-nav-bar-active {
+  100% {
+    width: 100%; }
+  /*100% {transform: scaleX(1); background-color: #263238; height: 15%; margin-bottom: 0;}*/ }
+@keyframes nav-bar-a-active {
+  100% {
+    border-bottom: 5px solid #607D8B; } }
 .button {
   background-color: gray;
   border: none;
