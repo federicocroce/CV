@@ -26,6 +26,10 @@ $BlueGrey900: #212121;
   width: 100%;
 }
 
+.hide{
+  display: none;
+}
+
 
 .back-color{background-color: red;}
 ///////////////////////
@@ -35,14 +39,19 @@ $BlueGrey900: #212121;
 
 .backgorund-container{@extend .full-screen; background-color: #37474F;}
 
+
 .background {
   background-color: $BlueGrey900;
   @extend .full-screen;
+  &:before{
+    content: '';
+    width: 100%; top:69%; border-bottom: 30px solid $BlueGrey900; border-top: 1px solid $BlueGrey400; position: absolute;
+  }
   /*background: url("../img/53483-hardDrive.jpg") no-repeat;*/
   /*-webkit-filter: blur(5px);*/
 }
 
-.background-active{animation: background-active 1s forwards;}
+/*.background-active{animation: background-active 1s forwards;}*/
 
 .background-img {
   background-color: $BlueGrey800;
@@ -60,9 +69,9 @@ $BlueGrey900: #212121;
   background-color: rgba(33, 33, 33, 0.6);
 }
 
-.opacity-active-background{
+/*.opacity-active-background{
   animation: opacity-active-background 1s forwards;
-}
+}*/
 
 /*.background{background:url("../img/background.jpg") no-repeat; background-size: contain; -webkit-filter: blur(2px);}*/
 /*.wraper-begin {right: 50%; top: 50%; position: absolute; transform: translate(50%, -50%)}*/
@@ -100,12 +109,9 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
     content: '';
     background: $BlueGrey900;
     width: 100%;
-    height: 50%;
+    height: 55%;
     position: absolute;
     top: 51%;
-    /* border-radius: 50%; */
-    /* border: 10px solid #212121; */
-    /* left: -37px; */
     z-index: 2;
     transform: scale(1.2);
 
@@ -122,35 +128,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
   z-index: 3;
   position: relative;
   border: 5px solid #212121;
-}
-
-.avatar-active {
-  animation: avatar-active 1s  forwards;
-}
-
-.avatar-ring-active {
-  animation: avatar-ring-active 2s  forwards;
-  &:after {content: none;}
-  .avatar-img {border: none;}
-}
-
-.nav-bar-active {
-  animation: nav-bar-active 2s 1s forwards;
-}
-
-/*// .nav-bar {
-//   height: 15%;
-//   width: 100%;
-//   background-color: $BlueGrey900;
-// }*/
-
-.line-nav-bar-active {
-  animation: line-nav-bar-active 1s 1s forwards;
-}
-
-.content-border-title{border: 1px solid $BlueGrey400; @extend .center-content; transform: rotateZ(180deg) translateX(50%); top: 25%; 
-  legend{padding: 0 13px; color: $BlueGrey400; transform: rotateZ(180deg); font-size: 1em;}
-  .title-name{font-size: 2em; transform: rotateZ(180deg); display: block; padding: 0.5em; color: $BlueGrey400;}
+  background-color: #212121;
 }
 
 .line-nav-bar {
@@ -162,9 +140,36 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
   /*// left: 20%;*/
 }
 
-.line-background{
-  @extend .line-nav-bar;
-  width: 100%; top:69%; border-bottom: 30px solid $BlueGrey900; border-top: 1px solid $BlueGrey400;}
+
+/*.avatar-active {
+  animation: avatar-active 1s  forwards;
+}
+
+.avatar-ring-active {
+  animation: avatar-ring-active 2s  forwards;
+  &:after {content: none;}
+  .avatar-img {border: none;}
+  .content-border-title{border: 1px solid red;}
+}
+
+.nav-bar-active {
+  animation: nav-bar-active 2s 1s forwards;
+}
+*/
+/*// .nav-bar {
+//   height: 15%;
+//   width: 100%;
+//   background-color: $BlueGrey900;
+// }*/
+
+/*.line-nav-bar-active {
+  animation: line-nav-bar-active 1s 1s forwards;
+}
+*/
+.content-border-title{border: 1px solid $BlueGrey400; @extend .center-content; transform: rotateZ(180deg) translateX(50%); top: 25%; 
+  legend{padding: 0 13px; color: $BlueGrey400; transform: rotateZ(180deg); font-size: 1em;}
+  .title-name{font-size: 2em; transform: rotateZ(180deg); display: block; padding: 0.5em; color: $BlueGrey400;}
+}
 
 .nav-bar{
     background-color:$BlueGrey900;
@@ -217,6 +222,41 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
   }*/
 
 
+.click-home-active{
+
+  .line-background, .content-border-title{@extend .hide;}
+
+  .avatar{
+    animation: avatar-active 1s  forwards;
+  }
+
+  .background{animation: background-active 1s forwards;
+    &:before{
+      content: '';
+      @extend .hide;
+    }
+  }
+
+  .background-img-dark, .background-img{
+    animation: opacity-active-background 1s forwards;
+  }
+
+  .avatar-ring{
+    animation: avatar-ring-active 2s  forwards;
+    &:after {content: none;}
+    .avatar-img {border: none;}
+    .content-border-title{border: 1px solid red;}
+  }
+
+  .nav-bar{
+    animation: nav-bar-active 2s 1s forwards;
+  }
+
+  .line-nav-bar{
+  animation: line-nav-bar-active 1s 1s forwards;
+  }
+}
+
 
 
 ///////////////////////// ANIMATIONS
@@ -234,7 +274,6 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
    background-color: $BlueGrey400;
    border-bottom: 30px solid $BlueGrey400;
    /*background: none;*/
-   // -webkit-filter: blur(0);
   }
 }
 

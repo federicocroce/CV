@@ -1,13 +1,14 @@
 $(document).ready(function() {
     $(".avatar-ring").click(function () {
-        $( ".avatar-ring" ).addClass( "avatar-ring-active" );
-        $( ".background" ).addClass( "background-active" );
-        $( ".line-background" ).addClass( "background-active" );
-        $( ".avatar" ).addClass( "avatar-active" );
-        $( ".nav-bar" ).addClass( "nav-bar-active" );
-        $( ".line-nav-bar" ).addClass( "line-nav-bar-active" );
-        $( ".background-img" ).addClass( "opacity-active-background" );
-        $( ".background-img-dark" ).addClass( "opacity-active-background" );
+        // $( ".avatar-ring" ).addClass( "avatar-ring-active" );
+        $( "body" ).addClass( "click-home-active" );
+        // $( ".background" ).addClass( "background-active" );
+        // $( ".line-background" ).addClass( "background-active" );
+        // $( ".avatar" ).addClass( "avatar-active" );
+        // $( ".nav-bar" ).addClass( "nav-bar-active" );
+        // $( ".line-nav-bar" ).addClass( "line-nav-bar-active" );
+        // $( ".background-img" ).addClass( "opacity-active-background" );
+        // $( ".background-img-dark" ).addClass( "opacity-active-background" );
         // $(".background").load('/views/home.html');
         $(".background").load('../views/home.html');
         
