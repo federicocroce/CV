@@ -31,6 +31,8 @@ $BlueGrey900: #212121;
 ///////////////////////
 
 
+
+
 .backgorund-container{@extend .full-screen; background-color: #37474F;}
 
 .background {
@@ -91,7 +93,23 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
 
 .avatar-ring {
   border-radius: 50%;
-  border: 5px solid $BlueGrey900;
+  border: 1px solid $BlueGrey400;
+  z-index: 1;
+  position: relative;
+  &:after {
+    content: '';
+    background: $BlueGrey900;
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 51%;
+    /* border-radius: 50%; */
+    /* border: 10px solid #212121; */
+    /* left: -37px; */
+    z-index: 2;
+    transform: scale(1.2);
+
+    }
 }
 
 .avatar-img {
@@ -101,6 +119,9 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
   transform: scale(1);
   border-radius: 50%;
   background-size: contain;
+  z-index: 3;
+  position: relative;
+  border: 5px solid #212121;
 }
 
 .avatar-active {
@@ -109,6 +130,8 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
 
 .avatar-ring-active {
   animation: avatar-ring-active 2s  forwards;
+  &:after {content: none;}
+  .avatar-img {border: none;}
 }
 
 .nav-bar-active {
@@ -141,7 +164,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
 
 .line-background{
   @extend .line-nav-bar;
-  width: 100%; top:69%; border-bottom: 30px solid $BlueGrey900;}
+  width: 100%; top:69%; border-bottom: 30px solid $BlueGrey900; border-top: 1px solid $BlueGrey400;}
 
 .nav-bar{
     background-color:$BlueGrey900;
