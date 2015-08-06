@@ -31,7 +31,7 @@ $BlueGrey900: #212121;
 }
 
 
-.back-color{background-color: red;}
+.back-color{background-color: red; width: 10%; height: 10%; position: absolute; top: 50%}
 ///////////////////////
 
 
@@ -111,10 +111,10 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
     width: 100%;
     height: 55%;
     position: absolute;
-    top: 51%;
+    top: 50%;
     z-index: 2;
     transform: scale(1.2);
-
+    border-radius: 0 0 50% 50% / 100%;
     }
 }
 
@@ -173,7 +173,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
 
 .nav-bar{
     background-color:$BlueGrey900;
-    padding-left: 150px;
+    // padding-left: 150px;
     height: 15%;
     width: 100%;
     text-align: center;
@@ -280,7 +280,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
 @keyframes avatar-active {
   /*0%   {top: 0;}*/
   100% {
-    top: 5%;
+    top: 8%;
     left: 2%;
     transform: translate(0, 0);
   }
