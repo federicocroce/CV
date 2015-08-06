@@ -47,6 +47,18 @@ $BlueGrey900: #212121;
     content: '';
     width: 100%; top:69%; border-bottom: 30px solid $BlueGrey900; border-top: 1px solid $BlueGrey400; position: absolute;
   }
+/*  &:after{
+    @extend .center-content;
+    content: '';
+    height: 50px;
+    width: 100px;
+    border-radius: 50% / 100% 100% 0 0;
+    border: 1px solid rgb(189, 189, 189);
+    top: 69%;
+    border-bottom: 0px solid rgba(33, 33, 33, 0);
+    z-index: 5;
+
+  }*/
   /*background: url("../img/53483-hardDrive.jpg") no-repeat;*/
   /*-webkit-filter: blur(5px);*/
 }
@@ -102,10 +114,10 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
 
 .avatar-ring {
   border-radius: 50%;
-  border: 1px solid $BlueGrey400;
+  /*border: 1px solid $BlueGrey400;*/
   z-index: 1;
   position: relative;
-  &:after {
+  /*&:after {
     content: '';
     background: $BlueGrey900;
     width: 100%;
@@ -115,7 +127,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
     z-index: 2;
     transform: scale(1.2);
     border-radius: 0 0 50% 50% / 100%;
-    }
+    }*/
 }
 
 .avatar-img {
@@ -129,6 +141,25 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
   position: relative;
   border: 5px solid #212121;
   background-color: #212121;
+  /*&:after{
+    content: '';
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 255, 0);
+    border-top: 2px solid #BDBDBD;
+    position: absolute;
+    border-radius: 50% / 100% 100% 0 0;
+    height: 50%;
+  }*/
+    &:before{
+    content: '';
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 255, 0);
+    border-top: 2px solid #BDBDBD;
+    position: absolute;
+    border-radius: 50% / 100% 100% 0 0;
+    height: 50%;
+  }
+
 }
 
 .line-nav-bar {
