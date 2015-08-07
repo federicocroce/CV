@@ -1,13 +1,53 @@
+// -------------------------------------
+//   Variables
+// -------------------------------------
+$BlueGrey400: #BDBDBD;
+$BlueGrey800: #424242;
+$BlueGrey900: #212121;
+
+$heightMainNav: 15%;
+
+
+
+
+
 // *************************************
 //
 //   Content
 //
 // *************************************
+*{
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
 
+.center-content{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+}
 
-// -------------------------------------
-//   Variables
-// -------------------------------------
+.opacity-false{@include opacity(1);}
+.opacity-true{@include opacity(0);}
+
+.full-screen {
+  height: 100%;
+  width: 100%;
+}
+
+.hide{
+  display: none;
+}
+
+.main-wrapper{
+	@extend .center-content;
+	width: 100% - 10%;
+	height: 100% - $heightMainNav;
+	top: $heightMainNav;
+	transform: translateX(-50%);
+}
 
 
 

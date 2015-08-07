@@ -2,38 +2,6 @@
 /* =====    PROJECT HealthCare
 
 /* ============================================================================================ */
-/*
-
-	Project:    HealthCare
-	Company:    HealthCare.com
-	Version:    1.0
-	Author:     UI/UX Design/Dev Team :)
-
-
-
-// ****************************************************
-//
-//   IMPORTS
-//
-//   -> Compass Framework
-//		- Main framework. All the magic happens here.
-//
-//   -> Core
-//		- Main styles. Core content.
-//
-//   -> Helpers
-//		- Collection of custom SASS Functions, Mixins, placeholders, extends and helper classes.
-//
-//   -> Modules
-//		- Every modular/reusable element has its styles defined here.
-//
-//   -> Shame CSS
-//		- Yeah, we should be ashamed of this. MUST fix these in the near future.
-//
-//
-// ****************************************************
-
-*/
 /*  Syntax Quick Reference
   --------------------------
   column($ratios: 1, $offset: 0, $cycle: 0, $uncycle: 0, $gutter: $jeet-gutter)
@@ -484,8 +452,8 @@ dfn {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -616,17 +584,17 @@ fieldset {
   margin: 0 2px;
   /* Apply borders and padding that keep the vertical rhythm. */
   border-color: #c0c0c0;
-  border-top-width: 0.0625em;
   border-top-style: solid;
+  border-top-width: 0.0625em;
   padding-top: 0.4625em;
-  border-bottom-width: 0.0625em;
   border-bottom-style: solid;
+  border-bottom-width: 0.0625em;
   padding-bottom: 0.9125em;
-  border-left-width: 0.0625em;
   border-left-style: solid;
+  border-left-width: 0.0625em;
   padding-left: 0.875em;
-  border-right-width: 0.0625em;
   border-right-style: solid;
+  border-right-width: 0.0625em;
   padding-right: 0.875em; }
 
 /**
@@ -716,8 +684,8 @@ html input[disabled] {
  */
 input[type="checkbox"],
 input[type="radio"] {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -735,8 +703,8 @@ input[type="radio"] {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
   /* 2 */ }
 
@@ -782,8 +750,8 @@ html, button {
 *,
 *:before,
 *:after {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 html, body {
@@ -792,7 +760,7 @@ html, body {
 
 body {
   font: 400 toem(16px) Arial, "Helvetica Neue", Helvetica, sans-serif;
-  background-color: #fff;
+  background-color: white;
   color: #000; }
 
 img {
@@ -970,14 +938,14 @@ html, button {
   padding: 0;
   font-family: 'Roboto', sans-serif; }
 
-.center-content, .avatar, .content-border-title {
+.center-content, .main-wrapper, .avatar, .content-border-title {
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
   top: 50%; }
 
 .opacity-false {
-  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1; }
 
 .opacity-true {
@@ -991,12 +959,14 @@ html, button {
 .hide, .click-home-active .line-background, .click-home-active .content-border-title, .click-home-active .background:before {
   display: none; }
 
+.main-wrapper {
+  width: 90%;
+  height: 85%;
+  top: 15%;
+  transform: translateX(-50%); }
+
 .back-color {
-  background-color: red;
-  width: 10%;
-  height: 10%;
-  position: absolute;
-  top: 50%; }
+  background-color: red; }
 
 .backgorund-container {
   background-color: #37474F; }
@@ -1022,7 +992,7 @@ html, button {
     width: 100%;
     top: 69%;
     border-bottom: 30px solid #212121;
-    border-top: 1px solid #BDBDBD;
+    border-top: 1px solid #bdbdbd;
     position: absolute; }
 
 /*.background-active{animation: background-active 1s forwards;}*/
@@ -1063,7 +1033,6 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
     transform: translate(-50%,-50%);}*/
 .avatar-ring {
   border-radius: 50%;
-  /*border: 1px solid $BlueGrey400;*/
   z-index: 1;
   position: relative;
   /*&:after {
@@ -1077,35 +1046,35 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
     transform: scale(1.2);
     border-radius: 0 0 50% 50% / 100%;
     }*/ }
-
-.avatar-img {
-  background: url("../img/avatar.png") no-repeat;
-  height: 110px;
-  width: 110px;
-  transform: scale(1);
-  border-radius: 50%;
-  background-size: contain;
-  z-index: 3;
-  position: relative;
-  border: 5px solid #212121;
-  background-color: #212121;
-  /*&:after{
+  .avatar-ring:before {
     content: '';
     width: 100%;
     border-bottom: 1px solid rgba(0, 0, 255, 0);
-    border-top: 2px solid #BDBDBD;
+    border-top: 3px solid #BDBDBD;
     position: absolute;
     border-radius: 50% / 100% 100% 0 0;
     height: 50%;
-  }*/ }
-  .avatar-img:before {
-    content: '';
-    width: 100%;
-    border-bottom: 1px solid rgba(0, 0, 255, 0);
-    border-top: 2px solid #BDBDBD;
-    position: absolute;
-    border-radius: 50% / 100% 100% 0 0;
-    height: 50%; }
+    top: -2%; }
+  .avatar-ring .avatar-img {
+    background: url("../img/avatar.png") no-repeat;
+    height: 110px;
+    width: 110px;
+    transform: scale(1);
+    border-radius: 50%;
+    background-size: contain;
+    z-index: 3;
+    position: relative;
+    border: 6px solid #212121;
+    background-color: #212121;
+    /*&:after{
+      content: '';
+      width: 100%;
+      border-bottom: 1px solid rgba(0, 0, 255, 0);
+      border-top: 2px solid #BDBDBD;
+      position: absolute;
+      border-radius: 50% / 100% 100% 0 0;
+      height: 50%;
+    }*/ }
 
 .line-nav-bar {
   width: 0;
@@ -1130,22 +1099,17 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
   animation: nav-bar-active 2s 1s forwards;
 }
 */
-/*// .nav-bar {
-//   height: 15%;
-//   width: 100%;
-//   background-color: $BlueGrey900;
-// }*/
 /*.line-nav-bar-active {
   animation: line-nav-bar-active 1s 1s forwards;
 }
 */
 .content-border-title {
-  border: 1px solid #BDBDBD;
+  border: 1px solid #bdbdbd;
   transform: rotateZ(180deg) translateX(50%);
   top: 25%; }
   .content-border-title legend {
     padding: 0 13px;
-    color: #BDBDBD;
+    color: #bdbdbd;
     transform: rotateZ(180deg);
     font-size: 1em; }
   .content-border-title .title-name {
@@ -1153,7 +1117,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
     transform: rotateZ(180deg);
     display: block;
     padding: 0.5em;
-    color: #BDBDBD; }
+    color: #bdbdbd; }
 
 .nav-bar {
   background-color: #212121;
@@ -1173,7 +1137,6 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
     padding-left: 0;
     list-style: none;
     margin-bottom: 0;
-    height: 100%;
     height: 50%;
     position: relative;
     top: 50%; }
@@ -1193,7 +1156,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
       padding: 0 20px;
       display: inline-block;
       text-decoration: none;
-      color: #BDBDBD;
+      color: #bdbdbd;
       height: 100%; }
 
 /*.nav-bar-a{
@@ -1209,10 +1172,8 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
   animation: opacity-active-background 1s forwards; }
 .click-home-active .avatar-ring {
   animation: avatar-ring-active 2s  forwards; }
-  .click-home-active .avatar-ring:after {
+  .click-home-active .avatar-ring:before {
     content: none; }
-  .click-home-active .avatar-ring .avatar-img {
-    border: none; }
   .click-home-active .avatar-ring .content-border-title {
     border: 1px solid red; }
 .click-home-active .nav-bar {
@@ -1225,43 +1186,54 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
     /*background: none;*/ } }
+
 @keyframes background-active {
   100% {
-    background-color: #BDBDBD;
-    border-bottom: 30px solid #BDBDBD;
+    background-color: #bdbdbd;
+    border-bottom: 30px solid #bdbdbd;
     /*background: none;*/ } }
+
 @keyframes avatar-active {
   /*0%   {top: 0;}*/
   100% {
     top: 8%;
     left: 2%;
     transform: translate(0, 0); } }
+
 @keyframes avatar-ring-active {
   0% {
     transform: scale(1); }
+
   50% {
     border: rgba(255, 255, 255, 0);
     transform: scale(0.6); }
+
   100% {
     transform: scale(1);
     border: 5px solid #212121;
     box-shadow: 0 1px 6px #212121;
     /*box-shadow: 0px 12px 28px -8px $BlueGrey400;*/ } }
+
 @keyframes nav-bar-active {
   100% {
     background-color: #212121;
-    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     box-shadow: 0 1px 6px #212121;
     /*box-shadow: 0 3px 10px $BlueGrey400;*/ }
+
   /*100% {transform: scaleX(1); background-color: #263238; height: 15%; margin-bottom: 0;}*/ }
+
 @keyframes line-nav-bar-active {
   100% {
     width: 100%; }
+
   /*100% {transform: scaleX(1); background-color: #263238; height: 15%; margin-bottom: 0;}*/ }
+
 @keyframes nav-bar-a-active {
   100% {
-    border-bottom: 5px solid #BDBDBD; } }
+    border-bottom: 5px solid #bdbdbd; } }
+
 .button {
   background-color: gray;
   border: none;
@@ -1272,17 +1244,19 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
   line-height: 2.5rem;
   text-align: center !important;
   text-decoration: none;
-  color: #fff;
+  color: white;
   height: 2.5rem;
   display: inline-block;
   padding: 0 30px;
   min-width: 2.5rem;
-  -moz-border-radius: 0.4375em;
   -webkit-border-radius: 0.4375em;
+  -moz-border-radius: 0.4375em;
+  -ms-border-radius: 0.4375em;
+  -o-border-radius: 0.4375em;
   border-radius: 0.4375em;
+  -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
-  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease; }
 
 [class^="icon-"]:before,
@@ -1290,4 +1264,4 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
   text-decoration: none;
   font-weight: 400; }
 
-/*# sourceMappingURL=styles.css.map */
+/*@ sourceMappingURL=styles.css.map */

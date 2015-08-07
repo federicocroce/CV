@@ -1,37 +1,11 @@
 
-$BlueGrey400: #BDBDBD;
-$BlueGrey800: #424242;
-$BlueGrey900: #212121;
+
 
 ////////////// GENERAL
 
-*{
-  margin: 0 auto;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
-}
+$top-separator: 70%;
 
-.center-content{
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  top: 50%;
-}
-
-.opacity-false{@include opacity(1);}
-.opacity-true{@include opacity(0);}
-
-.full-screen {
-  height: 100%;
-  width: 100%;
-}
-
-.hide{
-  display: none;
-}
-
-
-.back-color{background-color: red; width: 10%; height: 10%; position: absolute; top: 50%}
+.back-color{background-color: red;}
 ///////////////////////
 
 
@@ -70,13 +44,13 @@ $BlueGrey900: #212121;
   @extend .full-screen;
   background: url("../img/53483-hardDrive.jpg") no-repeat;
   -webkit-filter: blur(5px);
-  height: 70%;
+  height: $top-separator;
   position: fixed;
 }
 
 .background-img-dark{
   @extend .full-screen;
-  height: 70%;
+  height: $top-separator;
   position: fixed;
   background-color: rgba(33, 33, 33, 0.6);
 }
@@ -91,7 +65,7 @@ $BlueGrey900: #212121;
 
 .avatar{
   @extend .center-content;
-  top: 70%;
+  top: $top-separator;
 }
   
 /*background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transform: scale(0.9); border-radius: 50%; background-size: contain;}*/
@@ -114,7 +88,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
 
 .avatar-ring {
   border-radius: 50%;
-  /*border: 1px solid $BlueGrey400;*/
+  // border: 1px solid $BlueGrey400;
   z-index: 1;
   position: relative;
   /*&:after {
@@ -128,7 +102,16 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
     transform: scale(1.2);
     border-radius: 0 0 50% 50% / 100%;
     }*/
-}
+     &:before{
+      content: '';
+      width: 100%;
+      border-bottom: 1px solid rgba(0, 0, 255, 0);
+      border-top: 3px solid #BDBDBD;
+      position: absolute;
+      border-radius: 50% / 100% 100% 0 0;
+      height: 50%;
+      top: -2%;
+    }
 
 .avatar-img {
   background: url("../img/avatar.png") no-repeat;
@@ -139,8 +122,8 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
   background-size: contain;
   z-index: 3;
   position: relative;
-  border: 5px solid #212121;
-  background-color: #212121;
+  border: 6px solid $BlueGrey900;
+  background-color: $BlueGrey900;
   /*&:after{
     content: '';
     width: 100%;
@@ -150,14 +133,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
     border-radius: 50% / 100% 100% 0 0;
     height: 50%;
   }*/
-    &:before{
-    content: '';
-    width: 100%;
-    border-bottom: 1px solid rgba(0, 0, 255, 0);
-    border-top: 2px solid #BDBDBD;
-    position: absolute;
-    border-radius: 50% / 100% 100% 0 0;
-    height: 50%;
+   
   }
 
 }
@@ -167,7 +143,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
   height: 1px;
   border-bottom: 1px solid $BlueGrey900;
   position: absolute;
-  top: 15%;
+  top: $heightMainNav;
   /*// left: 20%;*/
 }
 
@@ -205,7 +181,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
 .nav-bar{
     background-color:$BlueGrey900;
     // padding-left: 150px;
-    height: 15%;
+    height: $heightMainNav;
     width: 100%;
     text-align: center;
     @include opacity(0);
@@ -221,7 +197,6 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
     padding-left: 0;
     list-style: none;
     margin-bottom: 0;
-    height: 100%;
     height: 50%;
     position: relative;
     top: 50%;   
@@ -274,8 +249,8 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
 
   .avatar-ring{
     animation: avatar-ring-active 2s  forwards;
-    &:after {content: none;}
-    .avatar-img {border: none;}
+    &:before {content: none;}
+    // .avatar-img {border: none;}
     .content-border-title{border: 1px solid red;}
   }
 
