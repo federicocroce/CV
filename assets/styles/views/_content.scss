@@ -1,9 +1,9 @@
 // -------------------------------------
 //   Variables
 // -------------------------------------
-$BlueGrey400: #BDBDBD;
-$BlueGrey800: #424242;
-$BlueGrey900: #212121;
+$grey400: #BDBDBD;
+$grey800: #424242;
+$grey900: #212121;
 
 $heightMainNav: 15%;
 
@@ -49,8 +49,25 @@ $heightMainNav: 15%;
 	transform: translateX(-50%);
 }
 
+.main-transition{
 
+}
 
+.main-transition-active{
+	animation: main-transition-active 2s forwards;
+}
+
+@keyframes main-transition-active {
+	0% {
+    @include opacity(0);
+	position: absolute;
+	transform: translateX(30%);
+  }
+  100% {
+	transform: translateX(-50%); @include opacity(1);
+    /*box-shadow: 0px 12px 28px -8px $grey400;*/
+  }
+}
 
 // -------------------------------------
 //   Base
