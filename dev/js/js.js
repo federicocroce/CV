@@ -1,6 +1,7 @@
 $(document).ready(function() {
     $(".avatar-ring").click(function () {
         // $( ".avatar-ring" ).addClass( "avatar-ring-active" );
+        $(".background").load('../views/home.html');
         $( "body" ).addClass( "click-home-active" );
         // $( ".background" ).addClass( "background-active" );
         // $( ".line-background" ).addClass( "background-active" );
@@ -10,7 +11,7 @@ $(document).ready(function() {
         // $( ".background-img" ).addClass( "opacity-active-background" );
         // $( ".background-img-dark" ).addClass( "opacity-active-background" );
         // $(".background").load('/views/home.html');
-        $(".background").load('../views/home.html');
+        
         
     });
 

@@ -5,13 +5,13 @@
 
 $top-separator: 70%;
 
-.back-color{background-color: red; width: 20%; height: 10%; margin-top: 3%;}
+
 ///////////////////////
 
 
 
 
-.backgorund-container{@extend .full-screen; background-color: #37474F;}
+.backgorund-container{@extend .full-screen; background-color: #37474F; z-index: -1; position: relative;}
 
 
 .background {
@@ -187,6 +187,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
     @include opacity(0);
     position: absolute;
     top: 0;
+    // z-index: 1;
   .nav-bar-text{    
     display: inline-block;
     padding-left: 20px;
@@ -208,7 +209,8 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
     margin-bottom: 0;
     height: 100%;
     border-bottom: 5px solid rgba(96, 125, 139, 0); text-decoration: none;    
-    &:hover {      
+    &:hover {  
+    color: red;    
       animation: nav-bar-a-active 1s  forwards;
     }
     &:active{
@@ -261,8 +263,11 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
   .line-nav-bar{
     animation: line-nav-bar-active 1s 1s forwards;
   }
-}
 
+  .main-transition{
+    animation: main-transition-active 2s forwards;
+  }
+}
 
 
 ///////////////////////// ANIMATIONS
