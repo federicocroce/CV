@@ -954,7 +954,9 @@ html, button {
 
 .full-screen, .backgorund-container, .background, .background-img, .background-img-dark {
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  position: relative;
+  z-index: -1; }
 
 .hide, .click-home-active .line-background, .click-home-active .content-border-title, .click-home-active .background:before {
   display: none; }
@@ -965,7 +967,7 @@ html, button {
   top: 15%;
   transform: translateX(-50%); }
 
-.main-transition {
+.first-transition-to-left {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   position: absolute;
@@ -976,11 +978,40 @@ html, button {
   padding-left: 0;
   list-style: none; }
 
-@keyframes main-transition-active {
+@keyframes first-transition-to-left-active {
+  0% {
+    transform: translateX(-20%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; }
+
   100% {
     transform: translateX(-50%);
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
+    /*box-shadow: 0px 12px 28px -8px $grey400;*/ } }
+
+@keyframes first-transition-to-left-ini-active {
+  0% {
+    transform: translateX(-20%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; }
+
+  100% {
+    transform: translateX(-50%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    /*box-shadow: 0px 12px 28px -8px $grey400;*/ } }
+
+@keyframes second-transition-to-left-active {
+  0% {
+    transform: translateX(-50%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1; }
+
+  100% {
+    transform: translateX(-100%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
     /*box-shadow: 0px 12px 28px -8px $grey400;*/ } }
 
 .backgorund-container {
@@ -1198,8 +1229,12 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
   animation: nav-bar-active 2s 1s forwards; }
 .click-home-active .line-nav-bar {
   animation: line-nav-bar-active 1s 1s forwards; }
-.click-home-active .main-transition {
-  animation: main-transition-active 2s forwards; }
+.click-home-active .first-transition-to-left {
+  animation: first-transition-to-left-active 0.5s forwards; }
+.click-home-active .first-transition-to-left-ini {
+  animation: first-transition-to-left-active 1s forwards; }
+.click-home-active .second-transition-to-left {
+  animation: second-transition-to-left-active 0.5s forwards; }
 
 @keyframes opacity-active-background {
   100% {

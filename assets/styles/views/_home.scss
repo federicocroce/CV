@@ -264,8 +264,16 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
     animation: line-nav-bar-active 1s 1s forwards;
   }
 
-  .main-transition{
-    animation: main-transition-active 2s forwards;
+  .first-transition-to-left{
+    animation: first-transition-to-left-active 0.5s forwards;
+  }  
+
+  .first-transition-to-left-ini{
+    animation: first-transition-to-left-active 1s forwards;
+  }  
+
+  .second-transition-to-left{
+    animation: second-transition-to-left-active 0.5s forwards;
   }
 }
 
