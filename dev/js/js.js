@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    var index;
+    var lastIndex;
+    var transitionTo = "";
     $(".avatar-ring").click(function () {
         // $( ".avatar-ring" ).addClass( "avatar-ring-active" );
         $(".background").load('../views/home.html', function() {
@@ -22,10 +25,31 @@ $(document).ready(function() {
 
         $(".nav-bar a").click(function () {
             var obj = $(this);
-            $( ".main-wrapper" ).addClass( "second-transition-to-left" );
+            $( ".main-wrapper" ).removeClass("second-transition-"+transitionTo).removeClass("first-transition-"+transitionTo);
+            
+            // debugger;
+            if(typeof index != 'undefined')
+                {
+                    lastIndex = index;
+                }
+            index = obj.parent().index();
+
+            if(typeof lastIndex == 'undefined'){
+                transitionTo = "to-left";
+            }
+            else{
+                if(index > lastIndex){transitionTo = "to-left";}
+                else{                
+                    transitionTo = "to-right";
+                }
+            }
+            
+            
+            $( ".main-wrapper" ).addClass("second-transition-"+transitionTo);
+            // debugger;
             setTimeout(function(){
                 $(".background").load('../views/'+obj.attr('href').replace('#','')+'.html', function() {
-                $( ".main-wrapper" ).addClass( "first-transition-to-left" );
+                $( ".main-wrapper" ).addClass("first-transition-"+transitionTo);
             // alert( "$.get succeeded" );
             });
             }, 500);

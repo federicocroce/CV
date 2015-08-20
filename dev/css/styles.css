@@ -990,6 +990,18 @@ html, button {
     opacity: 1;
     /*box-shadow: 0px 12px 28px -8px $grey400;*/ } }
 
+@keyframes first-transition-to-right-active {
+  0% {
+    transform: translateX(-80%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; }
+
+  100% {
+    transform: translateX(-50%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    /*box-shadow: 0px 12px 28px -8px $grey400;*/ } }
+
 @keyframes first-transition-to-left-ini-active {
   0% {
     transform: translateX(-20%);
@@ -1010,6 +1022,18 @@ html, button {
 
   100% {
     transform: translateX(-100%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    /*box-shadow: 0px 12px 28px -8px $grey400;*/ } }
+
+@keyframes second-transition-to-right-active {
+  0% {
+    transform: translateX(-50%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1; }
+
+  100% {
+    transform: translateX(100%);
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
     /*box-shadow: 0px 12px 28px -8px $grey400;*/ } }
@@ -1194,10 +1218,8 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
     margin-left: -4px;
     margin-bottom: 0;
     height: 100%;
-    border-bottom: 5px solid rgba(96, 125, 139, 0);
     text-decoration: none; }
     .nav-bar ul > li:hover {
-      color: red;
       animation: nav-bar-a-active 1s  forwards; }
     .nav-bar ul > li:active {
       border-bottom: 5px solid #607d8b; }
@@ -1214,7 +1236,8 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
 .click-home-active .avatar {
   animation: avatar-active 1s  forwards; }
 .click-home-active .background {
-  animation: background-active 1s forwards; }
+  animation: background-active 1s forwards;
+  overflow: hidden; }
   .click-home-active .background:before {
     content: ''; }
 .click-home-active .background-img-dark, .click-home-active .background-img {
@@ -1235,6 +1258,10 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
   animation: first-transition-to-left-active 1s forwards; }
 .click-home-active .second-transition-to-left {
   animation: second-transition-to-left-active 0.5s forwards; }
+.click-home-active .first-transition-to-right {
+  animation: first-transition-to-right-active 0.5s forwards; }
+.click-home-active .second-transition-to-right {
+  animation: second-transition-to-right-active 0.5s forwards; }
 
 @keyframes opacity-active-background {
   100% {
@@ -1295,10 +1322,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
   margin-top: 3%;
   padding: 5%; }
   .about-block li {
-    padding-bottom: 4%;
-    float: right; }
-    .about-block li span {
-      float: left; }
+    padding-bottom: 4%; }
 
 .button {
   background-color: gray;

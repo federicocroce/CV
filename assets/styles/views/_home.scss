@@ -208,9 +208,10 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
     margin-left: -4px;
     margin-bottom: 0;
     height: 100%;
-    border-bottom: 5px solid rgba(96, 125, 139, 0); text-decoration: none;    
+    // border-bottom: 5px solid rgba(96, 125, 139, 0);
+    text-decoration: none;    
     &:hover {  
-    color: red;    
+    // color: red;    
       animation: nav-bar-a-active 1s  forwards;
     }
     &:active{
@@ -238,7 +239,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
     animation: avatar-active 1s  forwards;
   }
 
-  .background{animation: background-active 1s forwards;
+  .background{animation: background-active 1s forwards; overflow: hidden;
     &:before{
       content: '';
       @extend .hide;
@@ -275,6 +276,16 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
   .second-transition-to-left{
     animation: second-transition-to-left-active 0.5s forwards;
   }
+
+  .first-transition-to-right{
+    animation: first-transition-to-right-active 0.5s forwards;
+  } 
+
+  .second-transition-to-right{
+    animation: second-transition-to-right-active 0.5s forwards;
+  }
+
+
 }
 
 
