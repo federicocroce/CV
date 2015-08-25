@@ -26,7 +26,8 @@ $(document).ready(function() {
         $(".nav-bar a").click(function () {
             var obj = $(this);
             $( ".main-wrapper" ).removeClass("second-transition-"+transitionTo).removeClass("first-transition-"+transitionTo);
-            
+           $(".main-nav-bar-list li").removeClass('active-main-bar');
+            obj.parent().addClass('active-main-bar');
             // debugger;
             if(typeof index != 'undefined')
                 {

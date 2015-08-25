@@ -1175,6 +1175,9 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
   animation: line-nav-bar-active 1s 1s forwards;
 }
 */
+.active-main-bar, .nav-bar ul > li:active {
+  border-bottom: 5px solid #bdbdbd; }
+
 .content-border-title {
   border: 1px solid #bdbdbd;
   transform: rotateZ(180deg) translateX(50%);
@@ -1220,9 +1223,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
     height: 100%;
     text-decoration: none; }
     .nav-bar ul > li:hover {
-      animation: nav-bar-a-active 1s  forwards; }
-    .nav-bar ul > li:active {
-      border-bottom: 5px solid #607d8b; }
+      animation: nav-bar-a-active 1s forwards; }
     .nav-bar ul > li a {
       padding: 0 20px;
       display: inline-block;
@@ -1313,6 +1314,9 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
   /*100% {transform: scaleX(1); background-color: #263238; height: 15%; margin-bottom: 0;}*/ }
 
 @keyframes nav-bar-a-active {
+  0% {
+    border-bottom: 5px solid rgba(0, 0, 255, 0); }
+
   100% {
     border-bottom: 5px solid #bdbdbd; } }
 

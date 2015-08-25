@@ -173,6 +173,10 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
   animation: line-nav-bar-active 1s 1s forwards;
 }
 */
+
+.active-main-bar{border-bottom: 5px solid $grey400;}
+
+
 .content-border-title{border: 1px solid $grey400; @extend .center-content; transform: rotateZ(180deg) translateX(50%); top: 25%; 
   legend{padding: 0 13px; color: $grey400; transform: rotateZ(180deg); font-size: 1em;}
   .title-name{font-size: 2em; transform: rotateZ(180deg); display: block; padding: 0.5em; color: $grey400;}
@@ -208,14 +212,14 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
     margin-left: -4px;
     margin-bottom: 0;
     height: 100%;
-    // border-bottom: 5px solid rgba(96, 125, 139, 0);
+    // border-bottom: 5px solid rgba(0, 0, 255, 0);
     text-decoration: none;    
     &:hover {  
-    // color: red;    
-      animation: nav-bar-a-active 1s  forwards;
+      // color: red;    
+      animation: nav-bar-a-active 1s forwards;
     }
     &:active{
-      border-bottom: 5px solid rgba(96, 125, 139, 1);
+      @extend .active-main-bar;
     }
     a {
       padding: 0 20px;
@@ -229,6 +233,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
   /*.nav-bar-a{
     border-bottom: 5px solid rgba(96, 125, 139, 1); text-decoration: none;
   }*/
+
 
 
 .click-home-active{
@@ -350,5 +355,6 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
 }
 
 @keyframes nav-bar-a-active {
+  0%{border-bottom: 5px solid rgba(0, 0, 255, 0);}
   100% {border-bottom: 5px solid $grey400;}
 }
