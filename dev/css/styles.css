@@ -965,13 +965,13 @@ html, button {
   width: 90%;
   height: 85%;
   top: 15%;
-  transform: translateX(-50%); }
+  transform: translate3d(-50%, 0, 0); }
 
 .first-transition-to-left {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   position: absolute;
-  transform: translateX(-20%); }
+  transform: translate3d(-20%, 0, 0); }
 
 .list-unstyled {
   margin: auto 0;
@@ -980,60 +980,60 @@ html, button {
 
 @keyframes first-transition-to-left-active {
   0% {
-    transform: translateX(-20%);
+    transform: translate3d(-20%, 0, 0);
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0; }
 
   100% {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     /*box-shadow: 0px 12px 28px -8px $grey400;*/ } }
 
 @keyframes first-transition-to-right-active {
   0% {
-    transform: translateX(-80%);
+    transform: translate3d(-80%, 0, 0);
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0; }
 
   100% {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     /*box-shadow: 0px 12px 28px -8px $grey400;*/ } }
 
 @keyframes first-transition-to-left-ini-active {
   0% {
-    transform: translateX(-20%);
+    transform: translate3d(-20%, 0, 0);
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0; }
 
   100% {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
     /*box-shadow: 0px 12px 28px -8px $grey400;*/ } }
 
 @keyframes second-transition-to-left-active {
   0% {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1; }
 
   100% {
-    transform: translateX(-100%);
+    transform: translate3d(-100%, 0, 0);
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
     /*box-shadow: 0px 12px 28px -8px $grey400;*/ } }
 
 @keyframes second-transition-to-right-active {
   0% {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1; }
 
   100% {
-    transform: translateX(100%);
+    transform: translate3d(100%, 0, 0);
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
     /*box-shadow: 0px 12px 28px -8px $grey400;*/ } }
@@ -1044,7 +1044,7 @@ html, button {
   position: relative; }
 
 .background {
-  background-color: #212121;
+  background-color: #004d40;
   /*  &:after{
       @extend .center-content;
       content: '';
@@ -1063,8 +1063,8 @@ html, button {
     content: '';
     width: 100%;
     top: 69%;
-    border-bottom: 30px solid #212121;
-    border-top: 1px solid #bdbdbd;
+    border-bottom: 30px solid #004d40;
+    border-top: 1px solid #80cbc4;
     position: absolute; }
 
 /*.background-active{animation: background-active 1s forwards;}*/
@@ -1136,8 +1136,8 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
     background-size: contain;
     z-index: 3;
     position: relative;
-    border: 6px solid #212121;
-    background-color: #212121;
+    border: 6px solid #004d40;
+    background-color: #004d40;
     /*&:after{
       content: '';
       width: 100%;
@@ -1151,7 +1151,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
 .line-nav-bar {
   width: 0;
   height: 1px;
-  border-bottom: 1px solid #212121;
+  border-bottom: 1px solid #004d40;
   position: absolute;
   top: 15%;
   /*// left: 20%;*/ }
@@ -1176,15 +1176,15 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
 }
 */
 .active-main-bar, .nav-bar ul > li:active {
-  border-bottom: 5px solid #bdbdbd; }
+  border-bottom: 5px solid #80cbc4; }
 
 .content-border-title {
-  border: 1px solid #bdbdbd;
+  border: 1px solid #80cbc4;
   transform: rotateZ(180deg) translateX(50%);
   top: 25%; }
   .content-border-title legend {
     padding: 0 13px;
-    color: #bdbdbd;
+    color: #80cbc4;
     transform: rotateZ(180deg);
     font-size: 1em; }
   .content-border-title .title-name {
@@ -1192,10 +1192,10 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
     transform: rotateZ(180deg);
     display: block;
     padding: 0.5em;
-    color: #bdbdbd; }
+    color: #80cbc4; }
 
 .nav-bar {
-  background-color: #212121;
+  background-color: #004d40;
   height: 15%;
   width: 100%;
   text-align: center;
@@ -1228,7 +1228,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
       padding: 0 20px;
       display: inline-block;
       text-decoration: none;
-      color: #bdbdbd;
+      color: #80cbc4;
       height: 100%; }
 
 /*.nav-bar-a{
@@ -1272,8 +1272,8 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
 
 @keyframes background-active {
   100% {
-    background-color: #bdbdbd;
-    border-bottom: 30px solid #bdbdbd;
+    background-color: #80cbc4;
+    border-bottom: 30px solid #80cbc4;
     /*background: none;*/ } }
 
 @keyframes avatar-active {
@@ -1293,16 +1293,16 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
 
   100% {
     transform: scale(1);
-    border: 5px solid #212121;
-    box-shadow: 0 1px 6px #212121;
+    border: 5px solid #004d40;
+    box-shadow: 0 1px 6px #004d40;
     /*box-shadow: 0px 12px 28px -8px $grey400;*/ } }
 
 @keyframes nav-bar-active {
   100% {
-    background-color: #212121;
+    background-color: #004d40;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
-    box-shadow: 0 1px 6px #212121;
+    box-shadow: 0 1px 6px #004d40;
     /*box-shadow: 0 3px 10px $grey400;*/ }
 
   /*100% {transform: scaleX(1); background-color: #263238; height: 15%; margin-bottom: 0;}*/ }
@@ -1318,10 +1318,10 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
     border-bottom: 5px solid rgba(0, 0, 255, 0); }
 
   100% {
-    border-bottom: 5px solid #bdbdbd; } }
+    border-bottom: 5px solid #80cbc4; } }
 
 .about-block {
-  background-color: #e0e0e0;
+  background-color: #e0f2f1;
   width: 60%;
   margin-top: 3%;
   padding: 5%; }
