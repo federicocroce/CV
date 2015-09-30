@@ -9,7 +9,7 @@ $mainNavBar: #004D40; // mainNavBar   mainNavBar
 
 $heightMainNav: 15%;
 
-
+/*@import "compass/css3/transform";*/
 
 
 
@@ -18,6 +18,7 @@ $heightMainNav: 15%;
 //   Content
 //
 // *************************************
+
 *{
   margin: 0 auto;
   padding: 0;
@@ -27,7 +28,7 @@ $heightMainNav: 15%;
 .center-content{
   position: absolute;
   left: 50%;
-  transform: translate(-50%, -50%);
+  @include translate(-50%, -50%);
   top: 50%;
 }
 
@@ -50,13 +51,13 @@ $heightMainNav: 15%;
 	width: 100% - 10%;
 	height: 100% - $heightMainNav;
 	top: $heightMainNav;
-	transform: translate3d(-50%,0,0);
+	@include translate3d(-50%,0,0);
 }
 
 .first-transition-to-left{
     @include opacity(0);
 	position: absolute;
-	transform: translate3d(-20%,0,0);
+	@include translate3d(-20%,0,0);
 }
 
 .list-unstyled{
@@ -71,50 +72,50 @@ $heightMainNav: 15%;
 
 @keyframes first-transition-to-left-active {
 	0%{
-		transform: translate3d(-20%,0,0); @include opacity(0);
+		@include translate3d(-20%,0,0); @include opacity(0);
 	}
   100% {
-	transform: translate3d(-50%,0,0); @include opacity(1);
+	@include translate3d(-50%,0,0); @include opacity(1);
     /*box-shadow: 0px 12px 28px -8px $firstBackground;*/
   }
 }
 
 @keyframes first-transition-to-right-active {
 	0%{
-		transform: translate3d(-80%,0,0); @include opacity(0);
+		@include translate3d(-80%,0,0); @include opacity(0);
 	}
   100% {
-	transform: translate3d(-50%,0,0); @include opacity(1);
+	@include translate3d(-50%,0,0); @include opacity(1);
     /*box-shadow: 0px 12px 28px -8px $firstBackground;*/
   }
 }
 
 @keyframes first-transition-to-left-ini-active{
 	0%{
-		transform: translate3d(-20%,0,0); @include opacity(0);
+		@include translate3d(-20%,0,0); @include opacity(0);
 	}
   100% {
-	transform: translate3d(-50%,0,0); @include opacity(1);
+	@include translate3d(-50%,0,0); @include opacity(1);
     /*box-shadow: 0px 12px 28px -8px $firstBackground;*/
   }
 }
 
 @keyframes second-transition-to-left-active {
 	0%{
-		transform: translate3d(-50%,0,0); @include opacity(1);
+		@include translate3d(-50%,0,0); @include opacity(1);
 	}
   100% {
-	transform: translate3d(-100%,0,0); @include opacity(0);
+	@include translate3d(-80%,0,0); @include opacity(0);
     /*box-shadow: 0px 12px 28px -8px $firstBackground;*/
   }
 }
 
 @keyframes second-transition-to-right-active {
 	0%{
-		transform: translate3d(-50%,0,0); @include opacity(1);
+		@include translate3d(-50%,0,0); @include opacity(1);
 	}
   100% {
-	transform: translate3d(100%,0,0); @include opacity(0);
+	@include translate3d(-20%,0,0); @include opacity(0);
     /*box-shadow: 0px 12px 28px -8px $firstBackground;*/
   }
 }

@@ -106,7 +106,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
       content: '';
       width: 100%;
       border-bottom: 1px solid rgba(0, 0, 255, 0);
-      border-top: 3px solid #BDBDBD;
+      border-top: 1px solid $secondBackground;
       position: absolute;
       border-radius: 50% / 100% 100% 0 0;
       height: 50%;
