@@ -15,11 +15,11 @@ $top-separator: 70%;
 
 
 .background {
-  background-color: $grey900;
+  background-color: $mainNavBar;
   @extend .full-screen;
   &:before{
     content: '';
-    width: 100%; top:69%; border-bottom: 30px solid $grey900; border-top: 1px solid $grey400; position: absolute;
+    width: 100%; top:69%; border-bottom: 30px solid $mainNavBar; border-top: 1px solid $firstBackground; position: absolute;
   }
 /*  &:after{
     @extend .center-content;
@@ -88,12 +88,12 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
 
 .avatar-ring {
   border-radius: 50%;
-  // border: 1px solid $grey400;
+  // border: 1px solid $firstBackground;
   z-index: 1;
   position: relative;
   /*&:after {
     content: '';
-    background: $grey900;
+    background: $mainNavBar;
     width: 100%;
     height: 55%;
     position: absolute;
@@ -122,8 +122,8 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
   background-size: contain;
   z-index: 3;
   position: relative;
-  border: 6px solid $grey900;
-  background-color: $grey900;
+  border: 6px solid $mainNavBar;
+  background-color: $mainNavBar;
   /*&:after{
     content: '';
     width: 100%;
@@ -141,7 +141,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
 .line-nav-bar {
   width: 0;
   height: 1px;
-  border-bottom: 1px solid $grey900;
+  border-bottom: 1px solid $mainNavBar;
   position: absolute;
   top: $heightMainNav;
   /*// left: 20%;*/
@@ -166,7 +166,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
 /*// .nav-bar {
 //   height: 15%;
 //   width: 100%;
-//   background-color: $grey900;
+//   background-color: $mainNavBar;
 // }*/
 
 /*.line-nav-bar-active {
@@ -174,16 +174,16 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
 }
 */
 
-.active-main-bar{border-bottom: 5px solid $grey400;}
+.active-main-bar{border-bottom: 5px solid $firstBackground;}
 
 
-.content-border-title{border: 1px solid $grey400; @extend .center-content; transform: rotateZ(180deg) translateX(50%); top: 25%; 
-  legend{padding: 0 13px; color: $grey400; transform: rotateZ(180deg); font-size: 1em;}
-  .title-name{font-size: 2em; transform: rotateZ(180deg); display: block; padding: 0.5em; color: $grey400;}
+.content-border-title{border: 1px solid $firstBackground; @extend .center-content; transform: rotateZ(180deg) translateX(50%); top: 25%; 
+  legend{padding: 0 13px; color: $firstBackground; transform: rotateZ(180deg); font-size: 1em;}
+  .title-name{font-size: 2em; transform: rotateZ(180deg); display: block; padding: 0.5em; color: $firstBackground;}
 }
 
 .nav-bar{
-    background-color:$grey900;
+    background-color:$mainNavBar;
     // padding-left: 150px;
     height: $heightMainNav;
     width: 100%;
@@ -225,7 +225,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
       padding: 0 20px;
       display: inline-block;
       text-decoration: none;
-      color: $grey400;  
+      color: $firstBackground;  
       height: 100%;  
     }    
   }
@@ -306,8 +306,8 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
 
 @keyframes background-active {
   100% {
-   background-color: $grey400;
-   border-bottom: 30px solid $grey400;
+   background-color: $firstBackground;
+   border-bottom: 30px solid $firstBackground;
    /*background: none;*/
   }
 }
@@ -332,19 +332,19 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
   }
   100% {
     transform: scale(1);
-    border: 5px solid $grey900;
-    box-shadow: 0 1px 6px $grey900;
-    /*box-shadow: 0px 12px 28px -8px $grey400;*/
+    border: 5px solid $mainNavBar;
+    box-shadow: 0 1px 6px $mainNavBar;
+    /*box-shadow: 0px 12px 28px -8px $firstBackground;*/
   }
 }
 
 
 @keyframes nav-bar-active {
   100% {
-    background-color:$grey900;
+    background-color:$mainNavBar;
     @include opacity(1);
-    box-shadow: 0 1px 6px $grey900;
-     /*box-shadow: 0 3px 10px $grey400;*/
+    box-shadow: 0 1px 6px $mainNavBar;
+     /*box-shadow: 0 3px 10px $firstBackground;*/
   }
   /*100% {transform: scaleX(1); background-color: #263238; height: 15%; margin-bottom: 0;}*/
 }
@@ -356,5 +356,5 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
 
 @keyframes nav-bar-a-active {
   0%{border-bottom: 5px solid rgba(0, 0, 255, 0);}
-  100% {border-bottom: 5px solid $grey400;}
+  100% {border-bottom: 5px solid $firstBackground;}
 }
