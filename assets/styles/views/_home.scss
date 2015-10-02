@@ -290,8 +290,20 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
     animation: second-transition-to-right-active 0.5s forwards;
   }
 
-
 }
+
+/*@mixin set-color-section($some-number) {
+  @keyframes set-color-section {
+    100% {$firstBackground: red;}
+  }
+}*/
+
+.set-color-section{
+  /*animation: set-color-section 1s forwards;*/
+  $firstBackground: red;
+  /*@include set-color-section(10px);*/
+}
+
 
 
 ///////////////////////// ANIMATIONS
@@ -306,7 +318,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
 
 @keyframes background-active {
   100% {
-   background-color: $firstBackground;
+   background-color: $mainBackground;
    border-bottom: 30px solid $firstBackground;
    /*background: none;*/
   }
