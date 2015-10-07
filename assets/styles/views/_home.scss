@@ -11,7 +11,7 @@ $top-separator: 70%;
 
 
 
-.backgorund-container{@extend .full-screen; background-color: #37474F; z-index: -1; position: relative;}
+.backgorund-container{@extend .full-screen; background-color: red; z-index: -1; position: relative;}
 
 
 .background {
@@ -88,7 +88,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
 
 .avatar-ring {
   border-radius: 50%;
-  // border: 1px solid $firstBackground;
+   /*border: 1px solid $firstBackground;*/
   z-index: 1;
   position: relative;
   /*&:after {
@@ -106,7 +106,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
       content: '';
       width: 100%;
       border-bottom: 1px solid rgba(0, 0, 255, 0);
-      border-top: 1px solid $secondBackground;
+      border-top: 1px solid $firstBackground;
       position: absolute;
       border-radius: 50% / 100% 100% 0 0;
       height: 50%;
@@ -141,7 +141,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
 .line-nav-bar {
   width: 0;
   height: 1px;
-  border-bottom: 1px solid $mainNavBar;
+  border-bottom: 1px solid $firstBackground;
   position: absolute;
   top: $heightMainNav;
   /*// left: 20%;*/
@@ -174,7 +174,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
 }
 */
 
-.active-main-bar{border-bottom: 5px solid $firstBackground;}
+.active-main-bar{border-bottom: 3px solid $firstBackground;}
 
 
 .content-border-title{border: 1px solid $firstBackground; @extend .center-content; transform: rotateZ(180deg) translateX(50%); top: 25%; 
@@ -212,16 +212,16 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
     margin-left: -4px;
     margin-bottom: 0;
     height: 100%;
-    // border-bottom: 5px solid rgba(0, 0, 255, 0);
+    // border-bottom: 3px solid rgba(0, 0, 255, 0);
     text-decoration: none;    
-    &:hover {  
-      // color: red;    
+    &:hover {      
       animation: nav-bar-a-active 1s forwards;
     }
     &:active{
       @extend .active-main-bar;
     }
     a {
+      outline: none;
       padding: 0 20px;
       display: inline-block;
       text-decoration: none;
@@ -258,7 +258,6 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
   .avatar-ring{
     animation: avatar-ring-active 2s  forwards;
     &:before {content: none;}
-    // .avatar-img {border: none;}
     .content-border-title{border: 1px solid red;}
   }
 
@@ -344,7 +343,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
   }
   100% {
     transform: scale(1);
-    border: 5px solid $mainNavBar;
+    /*border: 5px solid $mainNavBar;*/
     box-shadow: 0 1px 6px $mainNavBar;
     /*box-shadow: 0px 12px 28px -8px $firstBackground;*/
   }
@@ -367,6 +366,6 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
 }
 
 @keyframes nav-bar-a-active {
-  0%{border-bottom: 5px solid rgba(0, 0, 255, 0);}
-  100% {border-bottom: 5px solid $firstBackground;}
+  0%{border-bottom: 3px solid rgba(0, 0, 255, 0);}
+  100% {border-bottom: 3px solid $firstBackground;}
 }

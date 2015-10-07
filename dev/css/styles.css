@@ -1089,7 +1089,7 @@ html, button {
     opacity: 0;
     /*box-shadow: 0px 12px 28px -8px $firstBackground;*/ } }
 .backgorund-container {
-  background-color: #37474F;
+  background-color: red;
   z-index: -1;
   position: relative; }
 
@@ -1114,7 +1114,7 @@ html, button {
     width: 100%;
     top: 69%;
     border-bottom: 30px solid #212121;
-    border-top: 1px solid #29B6F6;
+    border-top: 1px solid #5C6BC0;
     position: absolute; }
 
 /*.background-active{animation: background-active 1s forwards;}*/
@@ -1155,6 +1155,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
     transform: translate(-50%,-50%);}*/
 .avatar-ring {
   border-radius: 50%;
+  /*border: 1px solid $firstBackground;*/
   z-index: 1;
   position: relative;
   /*&:after {
@@ -1172,7 +1173,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
     content: '';
     width: 100%;
     border-bottom: 1px solid rgba(0, 0, 255, 0);
-    border-top: 1px solid #E0E0E0;
+    border-top: 1px solid #5C6BC0;
     position: absolute;
     border-radius: 50% / 100% 100% 0 0;
     height: 50%;
@@ -1201,7 +1202,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
 .line-nav-bar {
   width: 0;
   height: 1px;
-  border-bottom: 1px solid #212121;
+  border-bottom: 1px solid #5C6BC0;
   position: absolute;
   top: 15%;
   /*// left: 20%;*/ }
@@ -1231,15 +1232,15 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
 }
 */
 .active-main-bar, .nav-bar ul > li:active {
-  border-bottom: 5px solid #29B6F6; }
+  border-bottom: 3px solid #5C6BC0; }
 
 .content-border-title {
-  border: 1px solid #29B6F6;
+  border: 1px solid #5C6BC0;
   transform: rotateZ(180deg) translateX(50%);
   top: 25%; }
   .content-border-title legend {
     padding: 0 13px;
-    color: #29B6F6;
+    color: #5C6BC0;
     transform: rotateZ(180deg);
     font-size: 1em; }
   .content-border-title .title-name {
@@ -1247,7 +1248,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
     transform: rotateZ(180deg);
     display: block;
     padding: 0.5em;
-    color: #29B6F6; }
+    color: #5C6BC0; }
 
 .nav-bar {
   background-color: #212121;
@@ -1280,10 +1281,11 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
     .nav-bar ul > li:hover {
       animation: nav-bar-a-active 1s forwards; }
     .nav-bar ul > li a {
+      outline: none;
       padding: 0 20px;
       display: inline-block;
       text-decoration: none;
-      color: #29B6F6;
+      color: #5C6BC0;
       height: 100%; }
 
 /*.nav-bar-a{
@@ -1335,8 +1337,8 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
     /*background: none;*/ } }
 @keyframes background-active {
   100% {
-    background-color: #303030;
-    border-bottom: 30px solid #29B6F6;
+    background-color: #BDBDBD;
+    border-bottom: 30px solid #5C6BC0;
     /*background: none;*/ } }
 @keyframes avatar-active {
   /*0%   {top: 0;}*/
@@ -1352,7 +1354,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
     transform: scale(0.6); }
   100% {
     transform: scale(1);
-    border: 5px solid #212121;
+    /*border: 5px solid $mainNavBar;*/
     box-shadow: 0 1px 6px #212121;
     /*box-shadow: 0px 12px 28px -8px $firstBackground;*/ } }
 @keyframes nav-bar-active {
@@ -1369,9 +1371,9 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
   /*100% {transform: scaleX(1); background-color: #263238; height: 15%; margin-bottom: 0;}*/ }
 @keyframes nav-bar-a-active {
   0% {
-    border-bottom: 5px solid rgba(0, 0, 255, 0); }
+    border-bottom: 3px solid rgba(0, 0, 255, 0); }
   100% {
-    border-bottom: 5px solid #29B6F6; } }
+    border-bottom: 3px solid #5C6BC0; } }
 .about-block {
   background-color: #E0E0E0;
   width: 60%;
