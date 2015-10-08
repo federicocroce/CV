@@ -1202,7 +1202,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
 .line-nav-bar {
   width: 0;
   height: 1px;
-  border-bottom: 1px solid #5C6BC0;
+  border-bottom: 2px solid #5C6BC0;
   position: absolute;
   top: 15%;
   /*// left: 20%;*/ }
