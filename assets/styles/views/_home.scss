@@ -11,7 +11,7 @@ $top-separator: 70%;
 
 
 
-.backgorund-container{@extend .full-screen; background-color: red; z-index: -1; position: relative;}
+.backgorund-container{@extend .full-screen; background-color: $firstBackground; z-index: -1; position: relative;}
 
 
 .background {
@@ -258,7 +258,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
   .avatar-ring{
     animation: avatar-ring-active 2s  forwards;
     &:before {content: none;}
-    .content-border-title{border: 1px solid red;}
+    .content-border-title{border: 1px solid $firstBackground;}
   }
 
   .nav-bar{
@@ -299,7 +299,7 @@ background:url("../img/avatar.png") no-repeat; height: 100%; width: 100%; transf
 
 .set-color-section{
   /*animation: set-color-section 1s forwards;*/
-  $firstBackground: red;
+  $firstBackground: $firstBackground;
   /*@include set-color-section(10px);*/
 }
 
